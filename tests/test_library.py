@@ -68,3 +68,20 @@ line3
 line4
 """
     )
+
+
+def test_round_trip():
+    test_input = """First line of header
+  Second line of header  
+Third line of header
+[17/04/2023]
+First line
+Second line
+Third line
+[18/04/2023]
+Fourth line
+Fifth line
+Sixth line
+"""
+
+    assert test_input == datedataformat.render(datedataformat.parse(test_input))
