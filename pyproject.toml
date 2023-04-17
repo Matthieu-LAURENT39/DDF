@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DateDataFormat"
+version = "0.0.1"
+authors = [{name="Matthieu LAURENT", email="matthieu.laurent69@proton.me" }]
+description = "A small library/CLI tool to manage files using the DDF specs"
+readme = "README.md"
+dependencies = ["click"]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ['black']
+tests = ['pytest']
+
+[project.scripts]
+ddf = "datedataformat.cli:cli"

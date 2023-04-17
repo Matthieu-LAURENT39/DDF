@@ -1,0 +1,28 @@
+There are two types of parsing: lax and strict.
+Some rules are only enforced during strict parsing. These rules are prefixed with a !
+
+Each date group should start with a "header" line with this format: ["dd/mm/yyyy"]
+Only header lines can start with [ and end with ]
+Any data before the first header is called the "file header". It will left as-is.
+!The file header should be separated by 2 blank lines from the first header
+
+!There should be no newline between the header and the first data line
+!Each data line should be separated by a single newline
+!There should be a single blank line between the last data line and the next header
+!Dates without entry should not be present in the file
+!The file should end with a newline
+
+
+An exemple file:
+"""
+[17/04/2023]
+my first very cool data line
+my cool second data line
+I sure do love data (3rd line)
+
+[18/04/2023]
+Wow, this is another cool day
+
+[20/04/2023]
+No entries yesterday
+"""
