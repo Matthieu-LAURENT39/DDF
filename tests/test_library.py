@@ -46,10 +46,16 @@ Third line of header
 def test_render():
     test_input = datedataformat.DDF(
         file_header="Hello\nWorld!",
-        _file_header_newlines=1,
+        _file_header_blank_lines=1,
         data={
             date(2023, 4, 17): ["line1", "line2"],
             date(2023, 4, 18): ["line3", "line4"],
+            date(2023, 4, 19): ["line5", "line6", "line7"],
+        },
+        _data_blank_lines={
+            date(2023, 4, 17): 2,
+            date(2023, 4, 18): 1,
+            date(2023, 4, 19): 0,
         },
     )
 
@@ -63,9 +69,15 @@ World!
 line1
 line2
 
+
 [18/04/2023]
 line3
 line4
+
+[19/04/2023]
+line5
+line6
+line7
 """
     )
 
