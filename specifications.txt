@@ -6,11 +6,11 @@ Only header lines can start with [ and end with ]
 Any data before the first header is called the "file header". It will left as-is.
 !The file header should be separated by 2 blank lines from the first header
 
-!There should be no newline between the header and the first data line
+!There should be no blank line between the date header and the first data line
 !Each data line should be separated by a single newline
 !There should be a single blank line between the last data line and the next header
 !Dates without entry should not be present in the file
-!The file should end with a newline
+!The file should end with a single newline
 
 
 An exemple file:
