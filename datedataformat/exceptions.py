@@ -1,0 +1,2 @@
+class DDFParseError(Exception):
+    pass
